@@ -1,0 +1,36 @@
+.example-h2 {
+    margin: 10px;
+  }
+  
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .example-margin {
+    margin: 0 10px;
+  }
+  
+  mat-card-header {
+    background: #12121212;
+    padding: 5px;
+    color: green;
+  }
+  
+  .delete-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .btn-area {
+    width: -webkit-fill-available;
+    margin: 20px 0 10px 0;
+  }
+  
+  .mat-form-field{
+    padding-right: 20px;
+  }

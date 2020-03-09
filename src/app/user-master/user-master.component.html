@@ -1,0 +1,214 @@
+<!-- <div class="row">
+    <div class="col-6">
+     
+
+        <section class="screen-form">
+            <div style="align-content: center ;padding-left: 550px">
+                <h1>NEW USER </h1>
+                <div>
+                    <form fxLayout="column" fxLayoutGap="10px" #f=ngForm (ngSubmit)="onSubmit(f)">
+
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="userId" ngModel name="userId" required
+                                [(ngModel)]="userMaster.userId" #userIdInput="ngModel">
+                            <mat-error *ngIf="userIdInput.hasError('required')">Field Must Not Be Empty</mat-error>
+
+                        </mat-form-field>
+
+
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="userName" ngModel name="userName" required
+                                [(ngModel)]="userMaster.userName" #userNameInput="ngModel">
+                            <mat-error *ngIf="userNameInput.hasError('required')">Field Must Not Be Empty
+                            </mat-error>
+
+                        </mat-form-field>
+
+
+
+                        <mat-form-field>
+                            <input type="password" matInput placeholder="password" ngModel name="password" required
+                                [(ngModel)]="userMaster.password" #passwordInput="ngModel">
+                            <mat-error *ngIf="passwordInput.hasError('required')">Field Must Not Be Empty
+                            </mat-error>
+
+                        </mat-form-field>
+
+
+                        <mat-form-field>
+                            <input type="email" matInput placeholder="email" ngModel name="email" required
+                                [(ngModel)]="userMaster.email" #emailInput="ngModel">
+                            <mat-error *ngIf="emailInput.hasError('required')">Field Must Not Be Empty</mat-error>
+
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="CreatedBy" ngModel name="createdBy" required
+                                [(ngModel)]="userMaster.createdBy" #createdByInput="ngModel">
+                            <mat-error *ngIf="createdByInput.hasError('required')">Field Must Not Be Empty
+                            </mat-error>
+
+                        </mat-form-field>
+
+
+                        <mat-form-field>
+                            <input matInput [matDatepicker]="picker" placeholder="Created Date" ngModel
+                                name="createdDate" [(ngModel)]="userMaster.createdDate" required>
+
+
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+
+
+
+                        <mat-form-field>
+                            <mat-label>USER STATUS</mat-label>
+                            <select matNativeControl required ngModel name="userStatus" required
+                                [(ngModel)]="userMaster.userStatus" #userStatusInput="ngModel">
+                                <mat-error *ngIf="userStatusInput.hasError('required')">Field Must Not Be Empty
+                                </mat-error>
+                                >
+                                <option value="active">ACTIVE</option>
+                                <option value="inActive">INACTIVE</option>
+
+                            </select>
+                        </mat-form-field>
+                        <div *ngIf="roleMasterList.length>0">
+                            <mat-form-field>
+                                <mat-select placeholder="Select  ROLE" [(ngModel)]="userMaster.roleMaster"
+                                    name="roleMaster" #RoleMaster="ngModel">
+                                    <mat-option *ngFor="let roleMaster of roleMasterList" [value]="roleMaster">
+                                        {{roleMaster.roleId }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+
+                        <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">SUBMIT</button>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+</div> -->
+
+
+
+<div class="ui-g">
+    <mat-card class="ui-g-12 ui-md-12 ui-sm-12 ui-lg-12 ui-xl-12"
+        style="width: -webkit-fill-available; margin-top: 5px">
+        <mat-card-header>
+            <div>
+                USER MASTER
+            </div>
+
+        </mat-card-header>
+        <mat-card-content>
+
+            <!-- <mat-form-field class="ui-g-12 ui-md-3 ui-sm-12 ui-lg-3 ui-xl-3">
+                <input type="text" placeholder="Buyer Name" matInput>
+            </mat-form-field>
+
+            <mat-form-field class="ui-g-12 ui-md-3 ui-sm-12 ui-lg-3 ui-xl-3">
+                <input type="text" placeholder="Buyer Name" matInput>
+            </mat-form-field>
+
+            <mat-form-field class="ui-g-12 ui-md-3 ui-sm-12 ui-lg-3 ui-xl-3">
+                <input type="text" placeholder="Buyer Name" matInput>
+            </mat-form-field> -->
+
+
+            <form fxLayout="column" fxLayoutGap="10px" #f=ngForm (ngSubmit)="onSubmit(f)">
+
+                <mat-form-field>
+                    <input type="text" matInput placeholder="userId" ngModel name="userId" required
+                        [(ngModel)]="userMaster.userId" #userIdInput="ngModel">
+                    <mat-error *ngIf="userIdInput.hasError('required')">Field Must Not Be Empty</mat-error>
+
+                </mat-form-field>
+
+
+                <mat-form-field>
+                    <input type="text" matInput placeholder="userName" ngModel name="userName" required
+                        [(ngModel)]="userMaster.userName" #userNameInput="ngModel">
+                    <mat-error *ngIf="userNameInput.hasError('required')">Field Must Not Be Empty
+                    </mat-error>
+
+                </mat-form-field>
+
+
+
+                <mat-form-field>
+                    <input type="password" matInput placeholder="password" ngModel name="password" required
+                        [(ngModel)]="userMaster.password" #passwordInput="ngModel">
+                    <mat-error *ngIf="passwordInput.hasError('required')">Field Must Not Be Empty
+                    </mat-error>
+
+                </mat-form-field>
+
+
+                <mat-form-field>
+                    <input type="email" matInput placeholder="email" ngModel name="email" required
+                        [(ngModel)]="userMaster.email" #emailInput="ngModel">
+                    <mat-error *ngIf="emailInput.hasError('required')">Field Must Not Be Empty</mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input type="text" matInput placeholder="CreatedBy" ngModel name="createdBy" required
+                        [(ngModel)]="userMaster.createdBy" #createdByInput="ngModel">
+                    <mat-error *ngIf="createdByInput.hasError('required')">Field Must Not Be Empty
+                    </mat-error>
+
+                </mat-form-field>
+
+
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="Created Date" ngModel name="createdDate"
+                        [(ngModel)]="userMaster.createdDate" required>
+
+
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+
+
+                <mat-form-field>
+                    <mat-label>USER STATUS</mat-label>
+                    <select matNativeControl required ngModel name="userStatus" required
+                        [(ngModel)]="userMaster.userStatus" #userStatusInput="ngModel">
+                        <mat-error *ngIf="userStatusInput.hasError('required')">Field Must Not Be Empty
+                        </mat-error>
+                        >
+                        <option value="active">ACTIVE</option>
+                        <option value="inActive">INACTIVE</option>
+
+                    </select>
+                </mat-form-field>
+                <div *ngIf="roleMasterList.length>0">
+                    <mat-form-field>
+                        <mat-select placeholder="Select  ROLE" [(ngModel)]="userMaster.roleMaster" name="roleMaster"
+                            #RoleMaster="ngModel">
+                            <mat-option *ngFor="let roleMaster of roleMasterList" [value]="roleMaster">
+                                {{roleMaster.roleId }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">SUBMIT</button>
+
+            </form>
+
+
+
+        </mat-card-content>
+    </mat-card>
+
+
+
+</div>

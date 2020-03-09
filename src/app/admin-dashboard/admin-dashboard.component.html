@@ -1,0 +1,350 @@
+<div class="caption">
+    <div class="text-center extraBtn">
+        <h2>ADMIN DASHBOARD</h2>
+
+
+    </div><!-- Extra btn end -->
+
+</div><!-- Caption end -->
+<div class="containerScroll">
+    <div class="grayPanel mb-2">
+        <div class="form-row align-items-center mx-1">
+
+            <div class="pull-right">
+                <button name="submit" class="btn" title="Add" value="ngSubmit">Add</button>
+                <button name="save" class="btn" title="Save" value="ngSubmit" (click)="save()">Save</button>
+                <button name="submit" class="btn" title="Cancel" value="ngSubmit" (click)="onCancel()">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row no-gutters">
+        <div class=" col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <div class="table-responsive">
+                <h4>USER MASTER</h4>
+                <table class="table table-bordered ">
+                    <caption>USER MASTER</caption>
+
+                    <thead>
+                        <tr>
+                            <th id="User_Id" rowspan="2" title="User Id"> User Id</th>
+
+                            <th id="User Name" rowspan="2" title="User Name">User Name</th>
+
+
+                            <th id="Email Id" rowspan="2" title="Email Id">Email Id</th>
+
+                            <th id="Status" rowspan="2" title="Status">Status</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let userMaster of userMasterList" (click)=" userMasterRow(userMaster)">
+
+                            <td>
+                                {{userMaster.userId}}
+                            </td>
+                            <td>
+                                {{userMaster.userName}}
+                            </td>
+                            <td>
+                                {{userMaster.email}}
+                            </td>
+                            <td>
+                                {{userMaster.userStatus}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+            <div *ngIf="showUserMasterChild">
+
+                <div class="table-responsive" style="margin-top: 20px;">
+                    <h4>ROLE MASTER</h4>
+
+                    <table class="table table-bordered ">
+                        <caption></caption>
+                        <thead>
+                            <tr>
+                                <th id="Role Id" rowspan="2" title="Role Id"> Role Id</th>
+
+                                <th id="Role Name" rowspan="2" title="Role Name">Role Name</th>
+
+                                <th id="Status" rowspan="2" title="Status">Status</th>
+
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{selectedUserMaster.roleMaster.roleId}}</td>
+                                <td>{{selectedUserMaster.roleMaster.roleName}}</td>
+                                <td>{{selectedUserMaster.roleMaster.userRoleStatus}}</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="table-responsive" style="margin-top: 20px;">
+                    <h4>PROFESSIONAL DETAILS</h4>
+
+                    <table class="table table-bordered ">
+                        <caption></caption>
+                        <thead>
+                            <tr>
+                                <th id="Address Id" rowspan="2" title="Professional Detail Id">
+                                    Professional Detail
+                                    Id </th>
+
+                                <th id="Mobile No" rowspan="2" title="Mobile No">Mobile No</th>
+
+                                <th id="Email Id" rowspan="2" title="Email Id">Email Id</th>
+
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{selectedUserMaster.professionalDetail.professionalDetailId}}</td>
+                                <td>{{selectedUserMaster.professionalDetail.professionalMobile}}</td>
+                                <td>{{selectedUserMaster.professionalDetail.professionalEmailId}}</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div class="table-responsive" style="margin-top: 20px;">
+                    <h4>PERSONAL DETAILS</h4>
+
+                    <table class="table table-bordered ">
+                        <caption></caption>
+                        <thead>
+                            <tr>
+                                <th id="Personal Detail Id" rowspan="2" title="Personal  Id">
+                                    Personal Id
+                                </th>
+
+                                <th id="Mobile No" rowspan="2" title="Mobile No">Mobile No</th>
+                                <th id="Age" rowspan="2" title="Age">Age</th>
+
+                                <th id="Email Id" rowspan="2" title="Email Id">Email Id</th>
+
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td>{{selectedUserMaster.personal.personalId}}</td>
+                                <td>{{selectedUserMaster.personal.personalMobile}}</td>
+                                <td>{{selectedUserMaster.personal.age}}</td>
+                                <td>{{selectedUserMaster.personal.personalEmailId}}</td>
+
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div class="table-responsive" style="margin-top: 20px;">
+                    <h4>ADDRESS DETAILS</h4>
+
+                    <table class="table table-bordered ">
+                        <caption></caption>
+                        <thead>
+                            <tr>
+                                <th id="Address Id" rowspan="2" title="Personal  Id">Address Id </th>
+
+                                <th id="Pincode" rowspan="2" title="Pincode">Pincode</th>
+
+                                <th id="City" rowspan="2" title="City">City</th>
+
+                                <th id="State" rowspan="2" title="State">State</th>
+
+                                <th id="Country" rowspan="2" title="Country">Country</th>
+
+
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td>{{selectedUserMaster.address.addressId}}</td>
+                                <td>{{selectedUserMaster.address.pincode}}</td>
+                                <td>{{selectedUserMaster.address.city}}</td>
+                                <td>{{selectedUserMaster.address.state}}</td>
+                                <td>{{selectedUserMaster.address.country}}</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+            </div>
+            <!-- for condtion  -->
+
+        </div>
+    </div><!-- col-lg-4 end-->
+    <!--table-responsive end-->
+    <!-- col-lg-4 end-->
+    <!--table-responsive end-->
+</div>
+
+<!-- User Master End -->
+
+<!-- <div class="row">
+
+    <div class="col-3">
+        <div class="containerScroll">
+
+            <div class="row no-gutters">
+                <div class=" col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class="table-responsive">
+                        <table class="table table-bordered ">
+                            <caption></caption>
+                            <thead>
+                                <tr>
+                                    <th id="Role Id" rowspan="2" title="Role Id"> Role Id</th>
+
+                                    <th id="Role Name" rowspan="2" title="Role Name">Role Name</th>
+
+                                    <th id="Status" rowspan="2" title="Status">Status</th>
+
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="containerScroll">
+
+            <div class="row no-gutters">
+                <div class=" col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class="table-responsive">
+                        <table class="table table-bordered ">
+                            <caption></caption>
+                            <thead>
+                                <tr>
+                                    <th id="Address Id" rowspan="2" title="Professional Detail Id">Professional Detail
+                                        Id </th>
+
+                                    <th id="Mobile No" rowspan="2" title="Mobile No">Mobile No</th>
+
+                                    <th id="Email Id" rowspan="2" title="Email Id">Email Id</th>
+
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+
+        <div class="containerScroll">
+
+            <div class="row no-gutters">
+                <div class=" col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class="table-responsive">
+                        <table class="table table-bordered ">
+                            <caption></caption>
+                            <thead>
+                                <tr>
+                                    <th id="Personal Detail Id" rowspan="2" title="Personal  Id">Professional Detail Id
+                                    </th>
+
+                                    <th id="Mobile No" rowspan="2" title="Mobile No">Mobile No</th>
+
+                                    <th id="Email Id" rowspan="2" title="Email Id">Email Id</th>
+
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+
+        <div class="containerScroll">
+
+            <div class="row no-gutters">
+                <div class=" col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class="table-responsive">
+                        <table class="table table-bordered ">
+                            <caption></caption>
+                            <thead>
+                                <tr>
+                                    <th id="Address Id" rowspan="2" title="Personal  Id">Address Id </th>
+
+                                    <th id="Pincode" rowspan="2" title="Pincode">Pincode</th>
+
+                                    <th id="City" rowspan="2" title="City">City</th>
+
+                                    <th id="State" rowspan="2" title="State">State</th>
+
+                                    <th id="Country" rowspan="2" title="Country">Country</th>
+
+
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div> -->
+
+
+
+<!-- Role Master End -->
+
+
+<!-- Professional end -->
+
+
+
+<!-- personal End -->

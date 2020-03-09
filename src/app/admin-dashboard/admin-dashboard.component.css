@@ -1,0 +1,386 @@
+.caption {
+  padding: 2px 5px;
+  border-bottom: 2px solid #e3e3e3;
+}
+.caption button {
+  margin: 0 5px 0 0;
+  padding: 0px 5px !important;
+  font-size: 14px !important;
+}
+.caption button:hover {
+  color: #000;
+  background: none;
+}
+.caption .extraBtn > span input {
+  width: 100px;
+  padding: 2px 24px 2px 5px;
+  font-size: 14px;
+  vertical-align: middle;
+  border: 1px solid #a2a2a2;
+  border-radius: 4px;
+}
+.caption .extraBtn > span button {
+  margin: 0px 5px 0 0;
+  background: #fff8d7 !important;
+  border-color: #f5eed0 !important;
+}
+.caption .extraBtn > span button:focus {
+  box-shadow: none;
+}
+.caption .extraBtn > span button:hover {
+  border: 1px solid #d2c27d !important;
+}
+.caption .extraBtn > span .florocent {
+  background: #00e4ff !important;
+  color: #000 !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+.caption .extraBtn > span .florocent:hover {
+  background: #b1ff00 !important;
+  color: #fff !important;
+}
+.caption .extraBtn > span:last-child button {
+  top: 1px;
+  right: -5px;
+  background: none !important;
+}
+.caption .extraBtn > span:last-child button:hover {
+  border: none !important;
+}
+.caption .extraBtn > span:last-child button i, .caption .extraBtn > span:last-child button em {
+  color: #0fa786;
+  font-size: 14px;
+}
+.caption .eyeSlashColor {
+  color: #d61a57;
+}
+.caption .filterColor {
+  color: #0fb3c6;
+}
+.caption .groupColor {
+  color: #376b69;
+}
+.caption .sortColor {
+  color: #0fb3c6;
+}
+.caption .expandColor {
+  color: #d27d00;
+}
+.caption .csvColor {
+  color: #732b39;
+}
+.caption .pdfColor {
+  color: #e94d6b;
+}
+
+
+
+
+
+html, body {
+  height: 100%;
+  width:100%;
+}
+body{
+margin:0;
+  padding:0;
+  font-size:12px ;
+  color: #080808;
+  padding: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+button, button:focus {
+  outline: none;
+}
+.mainBtn {
+  margin-top: 5px;
+}
+.mainBtn button {
+  font-size: 12px;
+  padding: 2px 6px;
+  background: #3b6676;
+  color: #fff;
+  margin-right: 4px;
+}
+.mainBtn :last-child {
+  margin-right: 0px;
+}
+
+
+.tableCaption {
+  border-bottom: 1px solid #036072;
+  margin-bottom: 2px;
+}
+.tableCaption span {
+  font: 12px Verdana, Geneva, Tahoma, sans-serif !important;
+}
+.tableCaption span:first-child {
+  padding: 5px 10px;
+  background: #036072;
+  border-radius: 0px 10px 0 0;
+}
+.tableCaption span:last-child table {
+  margin-top: 2px;
+}
+.tableCaption i, .tableCaption em {
+  border: 1px solid #c8c8c8;
+  margin-left: 3px;
+  padding: 2px 5px;
+  color: #3b6676;
+  margin-top: 2px;
+  font-size: 14px;
+}
+.table {
+  margin-bottom: 0px;
+  background: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  height: auto;
+}
+.table caption {
+  display: none;
+}
+.table thead, .table th {
+  vertical-align: middle !important;
+  background: #3390a1;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #3390a1), color-stop(100%, #64bccc));
+  background: linear-gradient(to bottom, #3390a1 0%, #64bccc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3390a1', endColorstr='#64bccc', GradientType=0);
+}
+.table th {
+  font-weight: normal;
+  color: #fff;
+  text-transform: uppercase;
+}
+.table th span {
+  text-transform: lowercase !important;
+}
+.table th .textCapital {
+  text-transform: capitalize !important;
+}
+.table th input {
+  background: #fff !important;
+  border: 1px solid #38707d;
+  padding: 3px 5px;
+  width: 100%;
+  margin-bottom: 2px;
+}
+.table td, .table th {
+  padding: 3px;
+  border: 1px solid #38707d !important;
+}
+.table td {
+  vertical-align: middle;
+}
+.table td input {
+  border: none;
+  background: none !important;
+  width: 100%;
+}
+.table td input:focus {
+  box-shadow: none;
+  outline: none;
+}
+.table td button i, .table td button em {
+  font-size: 1.2em;
+}
+.table td .InputStyle input {
+  background: #fff !important;
+  border: 1px solid #38707d !important;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.table td .InputStyle select {
+  width: 100%;
+}
+.table tr td:first-child input:first-child {
+  vertical-align: middle;
+  margin-top: -2px;
+}
+.table .custom-select {
+  border: none;
+  background-color: transparent;
+}
+.table .calender, .table .calender .mat-form-field-wrapper {
+  height: 20px !important;
+}
+.table .calender .mat-form-field-wrapper .mat-icon-button .mat-button-wrapper .mat-datepicker-toggle-default-icon {
+  height: 16px !important;
+}
+.table .calender .mat-form-field-wrapper .mat-icon-button .mat-button-wrapper .mat-datepicker-toggle-default-icon {
+  font-size: 16px;
+}
+.table .calender .mat-form-field-wrapper .mat-icon-button {
+  line-height: 14px !important;
+}
+.table .calender .mat-form-field-wrapper .mat-form-field-infix input {
+  padding: 1px 3px 0px;
+  height: 17px !important;
+}
+.table .actionButton td button {
+  margin: -1px 0 0 0px;
+  vertical-align: middle;
+}
+.table .actionButton td button:last-child {
+  margin: -2px 0 0 10px;
+}
+.tableCaptionBtn button {
+  font: 12px Verdana, Geneva, Tahoma, sans-serif !important;
+  padding: 3px 5px;
+  background: #3b6676;
+  margin: 2px 0 0 2px;
+  border-radius: 4px;
+  color: #fff;
+}
+.containerScroll {
+  overflow-y: auto;
+  height: 83vh;
+  padding: 0.5rem;
+}
+.containerScroll .mandatoryMark {
+  color: red;
+}
+.containerScroll .outerRowActive {
+  background: #ffefa7;
+}
+.containerScroll .innerRowActive {
+  background: #ceefff;
+}
+.containerScroll .innerSecondRowActive {
+  background: #dfdfdf;
+}
+.containerScroll .grayPanel {
+  border: 1px solid #e3e3e3;
+  background: #f5f5f5;
+  padding: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+.containerScroll .grayPanel .mainBtn {
+  margin-top: 0px;
+}
+.containerScroll .grayPanel .form-group {
+  margin-bottom: 0px;
+}
+.containerScroll .grayPanel label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  margin-bottom: 0px;
+  font-weight: bold;
+  font-size: 12px;
+}
+.containerScroll .grayPanel input, .containerScroll .grayPanel select {
+  border: 1px solid #c3c3c3;
+  width: 105px;
+  padding: 3px 2px;
+}
+.containerScroll .grayPanel button {
+  font-size: 12px;
+  padding: 2px 6px;
+  background: #3b6676;
+  margin: 0px 2px;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  line-height: 1.5 !important;
+}
+.containerScroll .tableHeadPanel {
+  border: 1px solid #e3e3e3;
+  background: #f5f5f5;
+}
+.containerScroll .tableHeadPanel > div:first-child {
+  padding: 1px 5px 0;
+  font-size: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+.containerScroll .tableHeadPanel > div:last-child {
+  padding-right: 2px;
+}
+.containerScroll .tableHeadPanel i, .containerScroll .tableHeadPanel em {
+  border: 1px solid #c8c8c8;
+  margin-left: 3px;
+  padding: 2px 5px;
+  color: #3b6676;
+  margin-top: 2px;
+  font-size: 14px;
+}
+.containerScroll .tableHeadPanel .form-group {
+  margin-bottom: 0px !important;
+}
+.containerScroll .btnClick {
+  color: #00c43a;
+}
+.containerScroll .height24 select {
+  height: 24px;
+}
+.containerScroll .lightOrangeBorder {
+  border: 2px solid #d1d092;
+  padding: 5px !important;
+}
+.containerScroll .labelStyle label {
+  background: #036072;
+  padding: 4px 10px 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  margin-bottom: 0px !important;
+}
+.containerScroll .labelStyle input {
+  padding: 4px 5px 3px;
+  margin-top: -1px;
+}
+.containerScroll .rowDisable, .containerScroll .cellDisable {
+  background: #e6e6e6;
+  color: #777;
+}
+.containerScroll .rowDisable td, .containerScroll .cellDisable td, .containerScroll .rowDisable input, .containerScroll .cellDisable input {
+  color: #777;
+}
+.containerScroll .rowDisable td input, .containerScroll .cellDisable td input, .containerScroll .rowDisable input input, .containerScroll .cellDisable input input {
+  color: #777;
+}
+.containerScroll .iconTableStyle button i, .containerScroll .iconTableStyle button em {
+  border: 1px solid #aaa;
+  margin-left: 3px;
+  padding: 2px 5px;
+  color: #3b6676;
+  font-size: 14px;
+}
+.containerScroll .iconTableStyle button i:hover, .containerScroll .iconTableStyle button em:hover {
+  border: 1px solid #e52e4d !important;
+  color: #e52e4d;
+}
+.containerScroll .tablePanelHeight {
+  height: 40px;
+}
+.containerScroll .tablePanelHeight > div:last-child {
+  padding-right: 10px !important;
+}
+.containerScroll .testInfoBg tr td:first-child {
+  background-color: #a8e3c8;
+  border: 1px solid #6eaa8e !important;
+}
+.containerScroll .productionCalender {
+  border: 1px solid #7a7a7a !important;
+  padding: 1px 2px;
+}
+.containerScroll .productionCalender i, .containerScroll .productionCalender em {
+  font-size: 14px;
+}
+/* a{
+  text-decoration: none;
+  color: white;
+}
+a:hover, a:active{
+  color: lightgray;
+}
+.navigation-items{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-caption{
+  display:inline-block;
+  padding: 6px;
+}
+*/

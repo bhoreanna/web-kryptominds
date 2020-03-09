@@ -1,0 +1,119 @@
+<div class="caption">
+    <div class="text-center extraBtn">
+        <h2>PROFILE DETAILS</h2>
+
+
+    </div><!-- Extra btn end -->
+
+</div><!-- Caption end -->
+
+<div class="container" style="margin-top: 20px;">
+    <form #f=ngForm (ngSubmit)="onSubmit()">
+
+        <div class="row">
+
+            <div class="col-4 border ">
+                <h4>PROFESSIONAL </h4>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="professionalMobile" ngModel name="professionalMobile"
+                        required [(ngModel)]="userMaster.professionalDetail.professionalMobile"
+                        #professionalMobileInput="ngModel">
+                    <mat-error *ngIf="professionalMobileInput.hasError('required')">Field Must Not Be Empty
+                    </mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input type="email" matInput placeholder="professionalEmailId" ngModel name="professionalEmailId"
+                        required [(ngModel)]="userMaster.professionalDetail.professionalEmailId"
+                        #professionalEmailIdInput="ngModel">
+                    <mat-error *ngIf="professionalEmailIdInput.hasError('required')">Field Must Not Be Empty
+                    </mat-error>
+
+                </mat-form-field>
+
+            </div>
+
+
+            <div class="col-4 border ">
+
+                <h4> PERSONAL </h4>
+
+                <mat-form-field>
+                    <input type="text" matInput placeholder="personalMobile" ngModel name="personalMobile" required
+                        [(ngModel)]="userMaster.personal.personalMobile" #personalMobileInput="ngModel">
+                    <mat-error *ngIf="personalMobileInput.hasError('required')">Field Must Not Be Empty
+                    </mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input type="text" matInput placeholder="age" ngModel name="age" required
+                        [(ngModel)]="userMaster.personal.age" #ageInput="ngModel">
+                    <mat-error *ngIf="ageInput.hasError('required')">Field Must Not Be Empty
+                    </mat-error>
+
+                </mat-form-field>
+
+
+                <mat-form-field>
+                    <input type="text" matInput placeholder="personalEmailId" ngModel name="personalEmailId" required
+                        [(ngModel)]="userMaster.personal.personalEmailId" #personalEmailIdInput="ngModel">
+                    <mat-error *ngIf="personalEmailIdInput.hasError('required')">Field Must Not Be Empty
+                    </mat-error>
+
+                </mat-form-field>
+
+            </div>
+            <div class="col-4 border ">
+
+
+                <h4> ADDRESS </h4>
+
+                <mat-form-field>
+                    <input type="text" matInput placeholder="pincode" ngModel name="pincode" required
+                        [(ngModel)]="userMaster.address.pincode" #pincodeInput="ngModel">
+                    <mat-error *ngIf="pincodeInput.hasError('required')">Field Must Not Be Empty
+                    </mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input type="text" matInput placeholder="city" ngModel name="city" required
+                        [(ngModel)]="userMaster.address.city" #cityInput="ngModel">
+                    <mat-error *ngIf="cityInput.hasError('required')">Field Must Not Be Empty
+                    </mat-error>
+
+                </mat-form-field>
+
+
+                <mat-form-field>
+                    <input type="text" matInput placeholder="state" ngModel name="state" required
+                        [(ngModel)]="userMaster.address.state" #stateInput="ngModel">
+                    <mat-error *ngIf="stateInput.hasError('required')">Field Must Not Be Empty
+                    </mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input type="text" matInput placeholder="country" ngModel name="country" required
+                        [(ngModel)]="userMaster.address.country" #countryInput="ngModel">
+                    <mat-error *ngIf="countryInput.hasError('required')">Field Must Not Be Empty
+                    </mat-error>
+
+                </mat-form-field>
+
+
+
+            </div>
+
+
+
+
+        </div>
+        <button style="margin-top: 10px;" type="submit" mat-raised-button color="primary"
+            [disabled]="f.invalid">SUBMIT</button>
+
+    </form>
+
+</div>

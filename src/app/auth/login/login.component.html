@@ -1,0 +1,119 @@
+<div class="bg-image">
+</div>
+
+<div>
+
+    <div *ngIf="showUserLoginOrRegister" class="login">
+        <div>
+            <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><i class="fa fa-user"></i>
+                </span> <input type="text" pInputText placeholder="Username" [(ngModel)]="userMaster.userName" />
+            </div>
+            <br>
+            <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><i class="fa fa-lock"></i></span>
+                <input type="password" pPassword placeholder="Password" [(ngModel)]="userMaster.password" />
+            </div>
+
+            <button class="btn btn-primary" (click)="onSubmit()">Login</button>
+            <!-- <button class="btn btn-primary" (click)="onLoginSignUp()">LOGIN/SIGNUP</button> -->
+
+        </div>
+    </div>
+
+    <!-- <div *ngIf="!showUserLoginOrRegister" class="signUp">
+        <div>
+
+            <div>
+                <form fxLayout="column" #f=ngForm (ngSubmit)="onSignUpSubmit()">
+
+                    <mat-form-field>
+                        <input type="text" matInput placeholder="userId" ngModel name="userId" required
+                            [(ngModel)]="signupUserMaster.userId" #userIdInput="ngModel">
+                        <mat-error *ngIf="userIdInput.hasError('required')">Field Must Not Be Empty</mat-error>
+
+                    </mat-form-field>
+
+
+                    <mat-form-field>
+                        <input type="text" matInput placeholder="userName" ngModel name="userName" required
+                            [(ngModel)]="signupUserMaster.userName" #userNameInput="ngModel">
+                        <mat-error *ngIf="userNameInput.hasError('required')">Field Must Not Be Empty
+                        </mat-error>
+
+                    </mat-form-field>
+
+
+
+                    <mat-form-field>
+                        <input type="password" matInput placeholder="password" ngModel name="password" required
+                            [(ngModel)]="signupUserMaster.password" #passwordInput="ngModel">
+                        <mat-error *ngIf="passwordInput.hasError('required')">Field Must Not Be Empty
+                        </mat-error>
+
+                    </mat-form-field>
+
+
+                    <mat-form-field>
+                        <input type="email" matInput placeholder="email" ngModel name="email" required
+                            [(ngModel)]="signupUserMaster.email" #emailInput="ngModel">
+                        <mat-error *ngIf="emailInput.hasError('required')">Field Must Not Be Empty</mat-error>
+
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input type="text" matInput placeholder="CreatedBy" ngModel name="createdBy" required
+                            [(ngModel)]="signupUserMaster.createdBy" #createdByInput="ngModel">
+                        <mat-error *ngIf="createdByInput.hasError('required')">Field Must Not Be Empty
+                        </mat-error>
+
+                    </mat-form-field>
+
+
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="picker" placeholder="Created Date" ngModel name="createdDate"
+                            [(ngModel)]="signupUserMaster.createdDate" required>
+
+
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+
+
+
+                    <mat-form-field>
+                        <mat-label>USER STATUS</mat-label>
+                        <select matNativeControl required ngModel name="userStatus" required
+                            [(ngModel)]="signupUserMaster.userStatus" #userStatusInput="ngModel">
+                            <mat-error *ngIf="userStatusInput.hasError('required')">Field Must Not Be Empty
+                            </mat-error>
+                            >
+                            <option value="active">ACTIVE</option>
+                            <option value="inActive">INACTIVE</option>
+
+                        </select>
+                    </mat-form-field>
+                    <div *ngIf="roleMasterList.length>0">
+                        <mat-form-field>
+                            <mat-select placeholder="Select  ROLE" [(ngModel)]="signupUserMaster.roleMaster"
+                                name="roleMaster" #RoleMaster="ngModel">
+                                <mat-option *ngFor="let roleMaster of roleMasterList" [value]="roleMaster">
+                                    {{roleMaster.roleId }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <button class="btn btn-success" type="submit" mat-raised-button color="primary"
+                        [disabled]="f.invalid">SIGNUP</button>
+
+                </form>
+
+            </div>
+
+            <button class="btn btn-primary" (click)="onLoginSignUp()">LOGIN/SIGNUP</button>
+
+        </div>
+    </div> -->
+
+</div>

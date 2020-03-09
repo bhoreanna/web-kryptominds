@@ -1,0 +1,101 @@
+<mat-toolbar color="primary">
+  <div fxHide.gt-xs>
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+
+    </button>
+  </div>
+  <div style="margin-right: 15px;">
+
+    <a style="margin-right: 15px;" routerLink="/home/admin-dashboard">ADMIN-DASHBOARD</a>
+
+    <a style="margin-right: 15px;" routerLink="/home/profile-page">PROFILE-PAGE</a>
+
+
+    <a style="margin-right: 15px;" routerLink="/home/role-master">ROLE</a>
+
+    <a title="USER MASTER" style="margin-right: 15px;" routerLink="/home/user-master"> USER MASTER </a>
+
+
+    <button float-right class="btn" style="margin-left: 750px;" (click)="userRoleService.userMasterLogOut()"><i
+        class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
+    </button>
+
+
+  </div>
+  <!-- <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+      <li>
+        <a routerLink="/owner">Owner Actions</a>
+      </li>
+      <li>
+        <a routerLink="/account">Account Actions</a>
+      </li>
+    </ul>
+  </div> -->
+</mat-toolbar>
+
+
+<!-- <div class="toolbar">
+  <ul class="navigation-items">
+    <li>
+      <a routerLink="/home/admin-dashboard">ADMIN-DASHBOARD</a>
+
+    </li>
+
+    <li>
+      <a routerLink="/home/profile-page">PROFILE-PAGE</a>
+
+    </li>
+
+
+
+    <li>
+      <a routerLink="/home/role-master">ROLE</a>
+
+    </li>
+
+    <li>
+      <a routerLink="/home/user-master">USER-MASTER</a>
+
+    </li>
+
+
+    <li>
+      <button (click)="userRoleService.userMasterLogOut()">Logout</button>
+
+    </li>
+  </ul>
+</div> -->
+
+
+
+
+<!-- <nav class="navbar navbar-light">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">conduit</a>
+
+    <ul class="nav navbar-nav pull-xs-right">
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">
+          Home
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link">
+          Sign in
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link">
+          Sign up
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav> -->

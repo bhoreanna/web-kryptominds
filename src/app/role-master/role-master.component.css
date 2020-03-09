@@ -1,0 +1,179 @@
+.caption{ 
+    padding: 2px 5px;
+    border-bottom: 2px solid #e3e3e3;
+    button{
+        margin:0 5px 0 0;
+        padding: 0px 5px!important;
+        font-size: 14px!important;
+    } 
+    button:hover{
+        color:#000;
+        background: none;
+    }
+    .extraBtn > span{
+        input{
+            width: 100px;
+            padding: 2px 24px 2px 5px;
+            font-size: 14px;
+            vertical-align: middle;
+            border: 1px solid #a2a2a2;
+            border-radius: 4px;
+        }
+        button{
+            margin: 0px 5px 0 0;
+            background: #fff8d7!important;
+            border-color: #f5eed0!important;
+            &:focus{
+                box-shadow: none
+            }
+            &:hover{
+                border: 1px solid #d2c27d!important;
+            }
+        }
+        .florocent{
+            background: #00e4ff!important;
+            color:#000!important;
+            font-family:$fontFamily;
+            &:hover{
+                background: #b1ff00!important;
+                color: #fff !important;
+            }
+        }
+    } 
+    .extraBtn > span:last-child button{
+        top: 1px;
+        right: -5px;
+        background: none!important;
+        &:hover{
+            border: none!important;
+        }
+        i, em{
+            color: #0fa786;
+            font-size: 14px;
+        }
+    }
+    .eyeSlashColor{
+        color:#d61a57;
+    }
+    .filterColor{
+        color:#0fb3c6
+    }
+    .groupColor{
+        color:#376b69
+    }
+    .sortColor{
+        color:#0fb3c6
+    }
+    .expandColor{
+        color:#d27d00
+    }
+    .csvColor{
+        color:#732b39
+    }
+    .pdfColor{
+        color:#e94d6b
+    }
+}
+
+.btn-primary-spacing 
+{
+margin-right: 5px;
+margin-bottom: 5px !important;
+}
+
+
+
+.table{
+    margin-bottom: 0px;
+    background: #fff;
+    font-family:$fontFamily;
+    caption{
+        display: none;
+    }
+    thead, th{
+        vertical-align: middle!important;
+        background: #3390a1;
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, #3390a1), color-stop(100%, #64bccc));
+        background: linear-gradient(to bottom, #3390a1 0%, #64bccc 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3390a1', endColorstr='#64bccc', GradientType=0 );
+    }
+    th{
+        font-weight: normal;
+        color: #fff;
+        text-transform: uppercase;
+        span{
+            text-transform: lowercase!important;
+        }
+        .textCapital{
+            text-transform: capitalize!important;
+        }
+        input{
+            background: #fff!important;
+            border:1px solid #38707d;
+            padding:3px 5px;
+            width:100%;
+            margin-bottom:2px;
+        }
+    }
+    td,th{
+        padding:3px;
+        border: $skyBlueBorder;
+    }
+    td {
+        vertical-align: middle;
+        input{
+            border:$borderNone;
+            background:none!important;
+            width: 100%;
+            &:focus{
+                box-shadow: none;
+                outline: none;
+            }
+        }
+        button i, button em{
+            font-size: 1.2em;
+        }
+        .InputStyle{
+            input{
+                background: #fff!important;
+                border:$skyBlueBorder;
+                padding-left: 3px;
+                padding-right: 3px;
+            }
+            select{
+                width:100%
+            }
+        }
+    }
+    tr td:first-child input:first-child{
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+    .custom-select{
+        border:$borderNone;
+        background-color: transparent;
+    }
+    .calender, .calender .mat-form-field-wrapper{
+        height:20px!important
+    }
+    .calender .mat-form-field-wrapper .mat-icon-button .mat-button-wrapper .mat-datepicker-toggle-default-icon{
+        height:16px!important
+    }
+    .calender .mat-form-field-wrapper .mat-icon-button .mat-button-wrapper .mat-datepicker-toggle-default-icon{
+        font-size: 16px;
+    }
+    .calender .mat-form-field-wrapper .mat-icon-button{
+        line-height: 14px!important;
+    }
+    .calender .mat-form-field-wrapper .mat-form-field-infix input{
+        padding:1px 3px 0px;
+        height: 17px!important;
+    }
+    .actionButton td button{
+        margin:-1px 0 0 0px;
+        vertical-align: middle;
+    }
+    .actionButton td button:last-child{
+        margin:-2px 0 0 10px;
+    }
+}
