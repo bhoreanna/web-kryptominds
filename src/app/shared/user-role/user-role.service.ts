@@ -138,6 +138,12 @@ export class UserRoleService {
 
   }
 
+  public getWithoutSignUpRoleMasterList() {
+
+    return this._http.get<RoleMaster[]>(SERVER_IP_PORT + '/all-role-masters');
+
+  }
+
 
   public getModuleListByRoleId(roleId: string) {
     return this._http.get<RoleMaster>(SERVER_IP_PORT + '/security/roleMasters/' + roleId);
@@ -159,6 +165,12 @@ export class UserRoleService {
 
   public saveUserMster(userMaster: UserMaster) {
     return this._http.post(SERVER_IP_PORT + '/security/saveUserMaster', userMaster);
+
+  }
+
+
+  public saveSignupUserMaster(userMaster: UserMaster) {
+    return this._http.post(SERVER_IP_PORT + '/signup', userMaster);
 
   }
 
