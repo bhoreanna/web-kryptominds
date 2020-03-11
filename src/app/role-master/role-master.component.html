@@ -1,127 +1,80 @@
+<!-- new changes  -->
+
+
 <div class="caption">
-  <span class="text-black pull-left text-uppercase">Role Master</span>
+  <div class="text-center extraBtn">
+    <h2>ROLE MASTER</h2>
 
-  <div class="text-right extraBtn">
+
+  </div><!-- Extra btn end -->
+
+</div><!-- Caption end -->
+<div class="containerScroll">
 
 
-    <div class="clearfix tableCaption tableCaptionBtn">
-      <div class="pull-right  ">
-        <button title="Add" alt="add" class="pointerBtn btn-primary-spacing" (click)="addNewRoleMaster()">Add
-        </button>
-        <button name="submit" title="Save" value="ngSubmit btn-primary-spacing" (click)="saveAllRoleMaster()"
-          class="pointerBtn">Save
-        </button>
+  <div class="row no-gutters">
+    <div class=" col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+
+      <div class="grayPanel mb-2">
+        <div class="form-row align-items-center mx-1">
+
+          <div class="pull-right">
+            <button title="Add" alt="add" class="pointerBtn btn-primary-spacing" (click)="addNewRoleMaster()">Add
+            </button>
+            <button name="submit" title="Save" value="ngSubmit btn-primary-spacing" (click)="saveAllRoleMaster()"
+              class="pointerBtn">Save
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="table-responsive">
+
+        <table class="table table-bordered ">
+          <caption></caption>
+
+          <thead>
+            <tr>
+              <th id="User_Id" rowspan="2" title="User Id"> ROLE ID</th>
+
+              <th id="User Name" rowspan="2" title="User Name">ROLE NAME</th>
+
+
+              <th id="Status" rowspan="2" title="Status">STATUS</th>
+
+            </tr>
+
+          </thead>
+          <tbody>
+            <tr *ngFor="let roleMaster of roleMasterList ;index as i;">
+              <td id="roleId">
+
+                <input type="text" [(ngModel)]="roleMaster.roleId">
+              </td>
+              <td id="roleName">
+
+                <input type="text" [(ngModel)]="roleMaster.roleName">
+
+              </td>
+              <td id="userRoleStatus">
+
+
+                <select id="role status" [(ngModel)]="roleMaster.userRoleStatus" class="w-50">
+                  <option *ngFor="let status of statusList" [ngValue]="status">
+                    {{ status }}
+                  </option>
+                </select>
+              </td>
+
+            </tr>
+
+          </tbody>
+        </table>
       </div>
     </div>
-  </div><!-- Extra btn end -->
-</div><!-- Caption end -->
-
-
-
-<table class="table">
-  <caption>
-
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">ROLE ID</th>
-      <th scope="col">ROLE NAME</th>
-      <th scope="col">STATUS</th>
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let roleMaster of roleMasterList ;index as i;">
-      <th id="roleId">
-
-        <input type="text" [(ngModel)]="roleMaster.roleId">
-      </th>
-      <td id="roleName">
-
-        <input type="text" [(ngModel)]="roleMaster.roleName">
-
-      </td>
-      <td id="userRoleStatus">
-        <!-- <select class="w-50" [(ngModel)]="roleMaster.userRoleStatus">
-          <option [value]="ACTIVE">ACTIVE</option>
-          <option [value]="INACTIVE">INACTIVE</option>
-        </select> -->
-
-        <select id="role status" [(ngModel)]="roleMaster.userRoleStatus" class="w-50">
-          <option *ngFor="let status of statusList" [ngValue]="status">
-            {{ status }}
-          </option>
-        </select>
-      </td>
-
-    </tr>
-
-  </tbody>
-</table>
-
-
-<!-- <section class="module-form">
-  <div style="align-content: center ;padding-left: 550px">
-    <h1> ROLE FORM</h1>
-  </div>
-  <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f=ngForm (ngSubmit)="onSubmit(f)">
-    <mat-form-field>
-      <input type="text" matInput placeholder="roleId" ngModel name="roleId" required [(ngModel)]="roleMaster.roleId"
-        #roleIdInput="ngModel">
-      <mat-error *ngIf="roleIdInput.hasError('required')">Field Must Not Be Empty</mat-error>
-
-    </mat-form-field>
-
-
-    <mat-form-field>
-      <input type="text" matInput placeholder="roleName" ngModel name="roleName" required
-        [(ngModel)]="roleMaster.roleName" #roleNameInput="ngModel">
-      <mat-error *ngIf="roleNameInput.hasError('required')">Field Must Not Be Empty</mat-error>
-
-    </mat-form-field>
-
-
-    <mat-form-field>
-      <input type="text" matInput placeholder="CreatedBy" ngModel name="createdBy" required
-        [(ngModel)]="roleMaster.createdBy" #createdByInput="ngModel">
-      <mat-error *ngIf="createdByInput.hasError('required')">Field Must Not Be Empty</mat-error>
-
-    </mat-form-field>
-
-
-    <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Created Date" ngModel name="createdDate"
-        [(ngModel)]="roleMaster.createdDate" required>
-
-
-
-
-
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-
-
-
-    <mat-form-field>
-      <mat-label>ROLE STATUS</mat-label>
-      <select matNativeControl required ngModel name="userRoleStatus" required [(ngModel)]="roleMaster.userRoleStatus"
-        #userRoleStatusInput="ngModel">
-        <mat-error *ngIf="userRoleStatusInput.hasError('required')">Field Must Not Be Empty</mat-error>
-        >
-        <option value="active">ACTIVE</option>
-        <option value="inActive">INACTIVE</option>
-
-      </select>
-    </mat-form-field>
-    <div *ngIf="!flag">
-      <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">SUBMIT</button>
-
-    </div>
-
-
-
-  </form>
-  <button mat-raised-button color="primary" (click)="refresh()">REFRESH</button>
-
-</section> -->
+  </div><!-- col-lg-4 end-->
+  <!--table-responsive end-->
+  <!-- col-lg-4 end-->
+  <!--table-responsive end-->
+</div>

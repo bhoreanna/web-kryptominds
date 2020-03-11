@@ -108,19 +108,6 @@
         </mat-card-header>
         <mat-card-content>
 
-            <!-- <mat-form-field class="ui-g-12 ui-md-3 ui-sm-12 ui-lg-3 ui-xl-3">
-                <input type="text" placeholder="Buyer Name" matInput>
-            </mat-form-field>
-
-            <mat-form-field class="ui-g-12 ui-md-3 ui-sm-12 ui-lg-3 ui-xl-3">
-                <input type="text" placeholder="Buyer Name" matInput>
-            </mat-form-field>
-
-            <mat-form-field class="ui-g-12 ui-md-3 ui-sm-12 ui-lg-3 ui-xl-3">
-                <input type="text" placeholder="Buyer Name" matInput>
-            </mat-form-field> -->
-
-
             <form fxLayout="column" fxLayoutGap="10px" #f=ngForm (ngSubmit)="onSubmit(f)">
 
                 <mat-form-field>
@@ -189,18 +176,21 @@
 
                     </select>
                 </mat-form-field>
-                <div *ngIf="roleMasterList.length>0">
-                    <mat-form-field>
-                        <mat-select placeholder="Select  ROLE" [(ngModel)]="userMaster.roleMaster" name="roleMaster"
-                            #RoleMaster="ngModel">
-                            <mat-option *ngFor="let roleMaster of roleMasterList" [value]="roleMaster">
-                                {{roleMaster.roleId }}
-                            </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div>
+                <!-- <div *ngIf="roleMasterList.length>0"> -->
+                <mat-form-field *ngIf="roleMasterList.length>0">
+                    <mat-select placeholder="Select  ROLE" [(ngModel)]="userMaster.roleMaster" name="roleMaster"
+                        #RoleMaster="ngModel">
+                        <mat-option *ngFor="let roleMaster of roleMasterList" [value]="roleMaster">
+                            {{roleMaster.roleId }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <!-- </div> -->
 
-                <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">SUBMIT</button>
+                <div>
+                    <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">SUBMIT</button>
+
+                </div>
 
             </form>
 
