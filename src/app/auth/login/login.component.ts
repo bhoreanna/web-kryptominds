@@ -39,7 +39,15 @@ export class LoginComponent implements OnInit {
 
       console.log('LOgin Sucess: ', res);
       if (res) {
-        this.router.navigate(['/home']);
+
+        if (res.roleId === 'admin') {
+          this.router.navigate(['/home/admin-dashboard']);
+
+        } else {
+          this.router.navigate(['/home/profile-page']);
+
+        }
+        //  this.router.navigate(['/home']);
 
       } else {
         console.log('====Flusiing Data in Login when user Not match====');

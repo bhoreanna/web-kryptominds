@@ -31,13 +31,8 @@ export class UserRoleService {
 
     console.log('********** UserAuthService *******************');
 
-
     const username = user.userName;
     const password = user.password;
-
-    // console.log('User name: ', username);
-    // console.log('password: ', password);
-
 
     return this._http.post<any>(
 
@@ -63,25 +58,49 @@ export class UserRoleService {
 
   public userMasterLogOut() {
 
-    sessionStorage.setItem(AUTHENTICATED_USER, "");
-    sessionStorage.setItem("ROLE_ID", "");
-    sessionStorage.setItem(TOKEN, "");
-    //this.authGuardService.flushAuthGurdData();
+    sessionStorage.removeItem(AUTHENTICATED_USER);
+    sessionStorage.removeItem('ROLE_ID');
+    sessionStorage.removeItem(TOKEN);
     this.router.navigate(['/']);
 
   }
 
 
   public isUserLogin() {
-    this.USER_Name = sessionStorage.getItem("AUTHENTICATED_USER");
+    this.USER_Name = sessionStorage.getItem(AUTHENTICATED_USER);
+    console.log('UserRoleService -> isUserLogin ->  this.USER_Name ', this.USER_Name);
+
     if (this.USER_Name) {
       console.log('IS LOGIN TRUE IN SERVICE');
       return true;
-    }
-    console.log('IS LOGIN FALSE IN SERVICE');
+    } else {
+      console.log('IS LOGIN FALSE IN SERVICE');
 
-    return false;
+      return false;
+
+    }
+
   }
+
+
+
+
+
+
+  public isAdminCheck() {
+    const adminId = sessionStorage.getItem('ROLE_ID').toUpperCase();
+
+    if (adminId === 'ADMIN') {
+      console.log('USER: ', adminId);
+
+      return true;
+    } else {
+      return false;
+
+    }
+
+  }
+
 
 
 

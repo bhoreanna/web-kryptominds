@@ -12,7 +12,6 @@ export class AuthGuardService implements CanActivate {
 
   constructor(private userRoleService: UserRoleService, private router: Router, ) {
 
-    console.log('--------------- In AuthGuardService Service: ------------');
   }
 
 
@@ -22,10 +21,15 @@ export class AuthGuardService implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     console.log('-------------------------- canActivate------------------------------------');
 
-    if (this.userRoleService.isUserLogin) {
+    if (this.userRoleService.isUserLogin()) {
+      console.log('AuthGuardService -> canActivate -> this.userRoleService.isUserLogin', this.userRoleService.isUserLogin)
+      console.log('return true');
+
       return true;
 
     } else {
+      console.log('return false');
+
       return false;
     }
 

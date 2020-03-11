@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="navbar navbar-dark bg-primary">
   <div fxHide.gt-xs>
     <button mat-icon-button>
       <mat-icon>menu</mat-icon>
@@ -7,17 +7,26 @@
   </div>
   <div style="margin-right: 15px;">
 
-    <a style="margin-right: 15px;" routerLink="/home/admin-dashboard">ADMIN-DASHBOARD</a>
+    <span *ngIf="this.userRoleService.isAdminCheck()">
 
-    <a style="margin-right: 15px;" routerLink="/home/profile-page">PROFILE-PAGE</a>
+      <a style="margin-right: 15px;" routerLink="/home/admin-dashboard">ADMIN-DASHBOARD</a>
 
-
-    <a style="margin-right: 15px;" routerLink="/home/role-master">ROLE</a>
-
-    <a title="USER MASTER" style="margin-right: 15px;" routerLink="/home/user-master"> USER MASTER </a>
+      <a *ngIf="this.userRoleService.isAdminCheck()" style="margin-right: 15px;"
+        routerLink="/home/profile-page">PROFILE-PAGE</a>
 
 
-    <button float-right class="btn" style="margin-left: 750px;" (click)="userRoleService.userMasterLogOut()"><i
+      <a style="margin-right: 15px;" routerLink="/home/role-master">ROLE</a>
+
+      <a style="margin-right: 15px;" routerLink="/home/user-master"> USER
+        MASTER </a>
+    </span>
+    <span>
+      <a *ngIf="!this.userRoleService.isAdminCheck()" style="margin-right: 15px;"
+        routerLink="/home/profile-page">PROFILE-PAGE</a>
+    </span>
+
+
+    <button float-right class="btn" title="LOGOUT" (click)="userRoleService.userMasterLogOut()"><i
         class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
     </button>
 
